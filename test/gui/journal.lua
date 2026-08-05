@@ -131,9 +131,6 @@ local function read_rendered_text(text_area)
         text = text .. '\n'
     end
 
-    text = text:gsub(" +\n", "\n")
-    text = text:gsub(" +$", "")
-
     return text:gsub("\n+$", "")
 end
 
@@ -160,9 +157,6 @@ local function read_selected_text(text_area)
             text = text .. '\n'
         end
     end
-
-    text = text:gsub(" +\n", "\n")
-    text = text:gsub(" +$", "")
 
     return text:gsub("\n+$", "")
 end
